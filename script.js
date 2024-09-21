@@ -165,19 +165,6 @@ const phrases =  [
 ];
 
 
-// Function to start updating sentence parts at different intervals
-// function startUpdating() {
-// 	initializeSentence();
-// 
-// 	// Set intervals for each part
-// 	setInterval(() => updatePart('starter', starters), 25500); // Every 5 seconds
-// 	setInterval(() => updatePart('subject', subjects), 15000); // Every 7 seconds
-// 	setInterval(() => updatePart('verb', verbs), 30000); // Every 6 seconds
-// 	setInterval(() => updatePart('object', objects), 18000); // Every 8 seconds
-// 	setInterval(() => updatePart('adverb', adverbs), 39000); // Every 9 seconds
-// 	setInterval(() => updatePart('phrase', phrases), 46000); // Every 10 seconds
-// }
-// Function to get a random word from an array
 function getRandomWord(array) {
 	return array[Math.floor(Math.random() * array.length)];
 }
@@ -241,7 +228,17 @@ function addEventListeners() {
 	});
 }
 
+function initializeSentence() {
+	document.getElementById('starter').textContent = getRandomWord(starters);
+	document.getElementById('subject').textContent = getRandomWord(subjects);
+	document.getElementById('verb').textContent = getRandomWord(verbs);
+	document.getElementById('object').textContent = getRandomWord(objects);
+	document.getElementById('adverb').textContent = getRandomWord(adverbs);
+	document.getElementById('phrase').textContent = getRandomWord(phrases); // Ensure phrase is randomized
+}
+
 // Initialize the event listeners after the page loads
 window.onload = function() {
+	initializeSentence();
 	addEventListeners();
 };

@@ -185,42 +185,63 @@ function getRandomWord(array) {
 // Function to update a sentence part with fade effect
 function updatePart(elementId, wordArray) {
 	const element = document.getElementById(elementId);
-	console.log(`Updating ${elementId}`);
 
 	// Start fade-out
 	element.classList.add('fade-out');
 
-	// After fade-out duration (1 second)
+	// Wait for the fade-out to complete before updating the word
 	setTimeout(() => {
-		// Change the word
+		// Update the word content
 		element.textContent = getRandomWord(wordArray);
+
 		// Remove fade-out class to fade back in
 		element.classList.remove('fade-out');
-	}, 100); // Match this with the CSS transition duration
+	}, 10); // Matches the CSS transition duration
 }
 
-// Function to initialize the sentence parts
-function initializeSentence() {
-	document.getElementById('starter').textContent = getRandomWord(starters);
-	document.getElementById('subject').textContent = getRandomWord(subjects);
-	document.getElementById('verb').textContent = getRandomWord(verbs);
-	document.getElementById('object').textContent = getRandomWord(objects);
-	document.getElementById('adverb').textContent = getRandomWord(adverbs);
-	document.getElementById('phrase').textContent = getRandomWord(phrases);
+// Add event listeners for both click and Enter key events
+function addEventListeners() {
+	const elements = document.querySelectorAll('#sentenceOutput span');
+
+	elements.forEach(element => {
+		const elementId = element.id;
+		let wordArray;
+
+		// Assign the correct word array to each element based on its id
+		switch (elementId) {
+			case 'starter':
+				wordArray = starters;
+				break;
+			case 'subject':
+				wordArray = subjects;
+				break;
+			case 'verb':
+				wordArray = verbs;
+				break;
+			case 'object':
+				wordArray = objects;
+				break;
+			case 'adverb':
+				wordArray = adverbs;
+				break;
+			case 'phrase':
+				wordArray = phrases;
+				break;
+		}
+
+		// Click event to change the word
+		element.addEventListener('click', () => updatePart(elementId, wordArray));
+
+		// Keydown event to change the word when "Enter" is pressed
+		element.addEventListener('keydown', (e) => {
+			if (e.key === 'Enter') {
+				updatePart(elementId, wordArray);
+			}
+		});
+	});
 }
 
-// Add event listeners to each span for clicking
-function addClickEvents() {
-	document.getElementById('starter').addEventListener('click', () => updatePart('starter', starters));
-	document.getElementById('subject').addEventListener('click', () => updatePart('subject', subjects));
-	document.getElementById('verb').addEventListener('click', () => updatePart('verb', verbs));
-	document.getElementById('object').addEventListener('click', () => updatePart('object', objects));
-	document.getElementById('adverb').addEventListener('click', () => updatePart('adverb', adverbs));
-	document.getElementById('phrase').addEventListener('click', () => updatePart('phrase', phrases));
-}
-
-// Function to start the process when the window loads
+// Initialize the event listeners after the page loads
 window.onload = function() {
-	initializeSentence(); // Initialize the sentence on page load
-	addClickEvents();      // Attach click events to each sentence part
+	addEventListeners();
 };

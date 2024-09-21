@@ -20,6 +20,11 @@ body {
 		align-items: center;
 	
 	}
+	
+#sentenceOutput span:focus {
+		outline: none;
+		box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
+	}
 
 #sentenceOutput span {
 	display: inline-block;

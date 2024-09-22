@@ -17,7 +17,7 @@ body {
 	
 }
 #sentenceOutput {
-	font-size: 2rem;
+	font-size: 2.2rem;
 		display: flex;
 		flex-direction: column;
 		align-items: center;

@@ -89,7 +89,7 @@ const verbs =  [
 	"rests", "melts", "connects", "surrounds", "descends", "ascends", 
 	"lingers", "revolves", "rises", "falls", "quietens", "reflects", 
 	"floats", "seeks", "blossoms", "quiets", "touches", "holds", 
-	"mirrors", "accepts", "stirs", "changes into","morphs into","dances with", "ponders","knows of", "used to be", "channels", "bows to", "flys with", "focuses on"
+	"mirrors", "accepts", "stirs", "changes into","morphs into","dances with", "ponders","knows of", "used to be", "channels", "bows to", "flys with", "focuses on","aligns with", "merges with",	"listens to",	"resonates with",	"reflects on",	"awakens to","drifts into","melds with","rests upon","surrenders to","flows through","harmonizes with","embraces","inhales","guides toward","enlightens","glides through","centers on","transcends",	"adapts to"
 ];
 
 const objects = [
@@ -111,8 +111,7 @@ const objects = [
 ];
 
 const adverbs = [
-	"quickly", "silently", "carefully", "excitedly", "gracefully",
-	"peacefully", "gently", "calmly", "softly", "quietly", 
+	"contentedly" ,"beautifully","quickly", "silently", "carefully", "excitedly", "gracefully","peacefully", "gently", "calmly", "softly", "quietly", 
 	"smoothly", "steadily", "patiently", "slowly", "effortlessly", 
 	"thoughtfully", "mindfully", "harmoniously", "delicately", "intentionally", 
 	"serenely", "naturally", "easily", "lightly", "subtly", 
@@ -131,7 +130,7 @@ const adverbs = [
 	"boldly", "faithfully", "gatheringly", "lightheartedly", "honestly", 
 	"fluidly", "endlessly", "eternally", "wholly", "quietly", 
 	"hushedly", "smoothly", "magically", "brightly", "glowingly", 
-	"vibrationally", "eternally", "cyclically", "inclusively"
+	"softly", "eternally", "cyclically", "inclusively","enthusiastically","freely","whole-heartedly","harmoniously","reverentially","imperceptibly","effortlessly","elementally","perceptively","fluidly","synchronistically"
 ];
 
 const phrases =  [

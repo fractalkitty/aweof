@@ -171,18 +171,11 @@ function getRandomWord(array) {
 // Function to update a sentence part with fade effect
 function updatePart(elementId, wordArray) {
 	const element = document.getElementById(elementId);
-
-	// Start fade-out
 	element.classList.add('fade-out');
-
-	// Wait for the fade-out to complete before updating the word
 	setTimeout(() => {
-		// Update the word content
 		element.textContent = getRandomWord(wordArray);
-
-		// Remove fade-out class to fade back in
 		element.classList.remove('fade-out');
-	}, 10); // Matches the CSS transition duration
+	}, 10); 
 }
 
 // Add event listeners for both click and Enter key events

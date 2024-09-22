@@ -11,8 +11,8 @@ body {
 	font-weight: bold;
 	text-align: center;
 	padding-top: 100px;
-	color: black;
-	background-color: ivory;
+	color: color(display-p3 0.894 0.851 0.784);
+	background-color: color(display-p3 0.114 0.122 0.114);
 	text-transform: lowercase;
 	
 }
@@ -26,7 +26,7 @@ body {
 	
 #sentenceOutput span:focus {
 		outline: none;
-		box-shadow: 2px 2px 4px rgba(0,0,0, 0.45);
+		box-shadow: 4px 4px 4px  color(display-p3 0.235 0.239 0.22);
 	}
 
 #sentenceOutput span {
@@ -36,13 +36,13 @@ body {
 	padding:1em;
 	box-sizing: border-box;
 	margin-bottom: -0.5em;
-	box-shadow: 2px 2px 4px rgba(0,0,0, 0.25);
+	box-shadow: 2px 2px 4px  color(display-p3 0.235 0.239 0.22);
 	border-radius: 8px; /* Rounded corners for the box shadow */
 	
 }
 
 #sentenceOutput span:hover {
-	background-color: rgb(240, 236, 203,0.5);
+	background-color: color(display-p3 0.42 0.459 0.4);
 }
 
 
